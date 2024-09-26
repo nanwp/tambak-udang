@@ -2,12 +2,12 @@
 echo "Deploying to staging..."
 
 # down docker-compose
-docker compose -f docker-compose-staging.yml down
+docker compose down
 
 # pull latest code
 git pull
 
 # build docker images
-docker compose -f docker-compose-staging.yml up --build -d
+docker compose up -d --build
 
 echo "Deployed to staging!"

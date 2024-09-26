@@ -7,7 +7,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
-COPY ./frontend_v2/package.json ./frontend_v2/yarn.lock* ./frontend_v2/package-lock.json* ./frontend_v2/pnpm-lock.yaml* ./
+COPY ./frontend/package.json ./frontend/yarn.lock* ./frontend/package-lock.json* ./frontend/pnpm-lock.yaml* ./
 
 RUN \
   if [ -f yarn.lock ]; then echo "Installing with Yarn" && yarn --frozen-lockfile; \
@@ -20,7 +20,7 @@ RUN \
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
-COPY ./frontend_v2 ./
+COPY ./frontend ./
 
 RUN \
   if [ -f yarn.lock ]; then yarn build; \
