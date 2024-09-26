@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-medium::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+
+* {
+  font-size: 12px;
+  scrollbar-width: thin;
+  scrollbar-gutter: 10px;
+}
