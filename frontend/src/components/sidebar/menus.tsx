@@ -6,14 +6,14 @@ import { cn } from '@/libs/cn';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 export default function Menus() {
-    const [openIndex, setOpenIndex] = useState(null);
-    const [openIndex2, setOpenIndex2] = useState(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [openIndex2, setOpenIndex2] = useState<number | null>(null);
 
-    const handleToggle = (index: any) => {
+    const handleToggle = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
-    const handleToggle2 = (index: any) => {
+    const handleToggle2 = (index: number) => {
         setOpenIndex2(openIndex2 === index ? null : index);
     };
 
