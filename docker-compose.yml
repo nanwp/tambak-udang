@@ -1,0 +1,35 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  app:
+    hostname: frontend-host
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile.prod
+    # env_file:
+    #   - ./frontend_v2/.env
+    networks:
+      - tambak-network
+
+  reverse-proxy:
+    build:
+      context: .
+      dockerfile: ./reverse-proxy/Dockerfile
+    restart: on-failure
+    volumes:
+      - "/run/docker.sock:/run/run/docker.sock:ro"
+    networks:
+      - tambak-network
+      - tambak-external
+    ports:
+      - '8070:80'
+    depends_on:
+      - app
+
+networks:
+  tambak-network:
+    external: false
+  tambak-external:
+    external: true
