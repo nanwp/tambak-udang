@@ -5,7 +5,7 @@ import Table from "@/components/table";
 import React from "react";
 
 export default function Page() {
-    const col = columns({});
+    const col = columns();
     return (
         <>
             <Table
