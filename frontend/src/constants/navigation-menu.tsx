@@ -13,32 +13,12 @@ export const menu = [
     logo: <Icon width={20} icon="bi:people-fill" />,
     subMenu: [
       {
-        name: "Kelompok Nelayan",
-        link: undefined,
-        subMenu: [
-          {
-            name: "Daftar Kelompok Nelayan",
-            link: "/daftar-kelompok-nelayan"
-          },
-          {
-            "name": "Data Kelompok Nelayan",
-            "link": "/data-kelompok-nelayan"
-          }
-        ],
+        name: "Data Kelompok Nelayan",
+        link: "/kelompok-nelayan"
       },
       {
         name: "Data Nelayan",
-        link: undefined,
-        subMenu: [
-          {
-            name: "Daftar Nelayan",
-            link: "/daftar-nelayan"
-          },
-          {
-            name: "Data Nelayan",
-            link: "/data-nelayan"
-          },
-        ],
+        link: "/nelayan"
       },
     ],
   },
@@ -48,12 +28,12 @@ export const menu = [
     logo: <Icon width={20} icon='bx:bxs-cart' />,
     subMenu: [
       {
-        name: "Cetak Surat Jalan",
-        link: "/cetak-surat-jalan",
+        name: "Surat Jalan",
+        link: "/surat-jalan",
       },
       {
-        name: "Input Transaksi",
-        link: "/input-transaksi",
+        name: "Timbangan",
+        link: "/timbangan",
       }
     ],
   },
@@ -63,12 +43,22 @@ export const menu = [
     logo: <Icon width={20} icon='carbon:document-pdf' />,
     subMenu: [
       {
-        name: "Laporan Transaksi",
-        link: "/laporan-transaksi",
+        name: "Laporan Penangkapan",
+        link: undefined,
+        subMenu: [
+          {
+            name: "Laporan Penangkapan Harian",
+            link: "/laporan-penangkapan-harian",
+          },
+          {
+            name: "Laporan Penangkapan Bulanan",
+            link: "/laporan-penangkapan-bulanan",
+          },
+        ]
       },
       {
-        name: "Laporan Nelayan",
-        link: "/laporan-nelayan",
+        name: "Laporan Ekspor",
+        link: "/laporan-ekspor",
       }
     ],
   }

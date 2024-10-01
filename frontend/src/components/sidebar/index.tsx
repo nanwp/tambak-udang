@@ -32,7 +32,7 @@ export default function SideBar({ children }: { children: ReactNode }) {
                             quality={100}
                         />
                         <p className="tracking-tighter font-semibold text-white">
-                            TAMBAK UDANG ABC
+                            Koperasi Nelayan Mino Raharjo
                         </p>
                     </header>
                     <Menus />
