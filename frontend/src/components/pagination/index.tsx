@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { cn } from "@/libs/cn";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import DataInfo from "./data-info";
