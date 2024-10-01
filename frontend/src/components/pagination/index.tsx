@@ -1,7 +1,6 @@
 import { cn } from "@/libs/cn";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import DataInfo from "./data-info";
-import CustomToPage from "./custom-to-page";
 import React from "react";
 
 export default function Pagination({
@@ -102,12 +101,6 @@ export default function Pagination({
                         <Icon icon="ooui:previous-rtl" width={10} />
                     </button>
                 </div>
-
-                <CustomToPage
-                    meta={meta}
-                    params={params}
-                    setParams={setParams}
-                />
             </div>
         </>
     );

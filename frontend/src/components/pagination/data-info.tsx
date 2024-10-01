@@ -1,4 +1,21 @@
-export default function DataInfo({ meta, data, params }: any) {
+import React from 'react';
+
+interface Meta {
+    page: number;
+    total_data: number;
+}
+
+interface Params {
+    page_size: number;
+}
+
+interface DataInfoProps {
+    meta: Meta;
+    data: any[]; // Sesuaikan tipe data sesuai dengan struktur data Anda
+    params: Params;
+}
+
+export default function DataInfo({ meta, data, params }: DataInfoProps) {
     return (
         <div className="flex items-center gap-2 text-sm font-medium">
             {data && (
